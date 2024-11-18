@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Search App</title>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
     <!-- Style CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <div class="main">
-
         <h1>Image Search App</h1>
+        
+        <!-- Search Input and Button -->
         <div class="search-image">
             <input type="text" id="searchImageInput" placeholder="Search Image...">
             <button id="searchImageButton">Search</button>
         </div>
 
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" style="display: none;">Loading...</div>
+        
+        <!-- Error Message -->
+        <div id="errorMessage" style="display: none; color: red;"></div>
+
+        <!-- Image Container -->
         <div class="container" id="imageContainer">
-            <!-- Images will be added here dynamically -->
+            <!-- Images will be dynamically added here -->
         </div>
 
+        <!-- Generate More Button -->
         <button id="generateMore" style="display: none;">Generate More...</button>
     </div>
     

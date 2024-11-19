@@ -72,6 +72,15 @@ function searchImages(query, page = 1) {
     });
 }
 
+// Add event listener for "Enter" key on the input field
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent the default form submission behavior
+    searchButton.click(); // Trigger the click event on the search button
+  }
+});
+
+// Existing click event for the search button
 searchButton.addEventListener("click", () => {
   generateMore.style.display = "block"; 
   currentPage = 1; 
